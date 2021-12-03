@@ -27,10 +27,10 @@ width: 100%;
   height:300px;
   position: relative;
   left: 40%;
-  top: 20px;
+  top: -35px;
   opacity: 1;
-  background: url('../img/sun1.svg');
-  animation: moving 10s infinite linear;
+  background: url('../img/sun.svg');
+  animation: moving 7s infinite linear;
 }
 .sun:hover{
   animation-play-state: paused;
@@ -41,14 +41,20 @@ width: 100%;
 
 .logo{
   font-size: 50px;
+  width:100px;
 }
 .i{
-  width:100px;
   position: relative;
-  top: -200px;
-  left: 905px;
-   animation: circle 10s infinite linear;
+  top: -210px;
+  left: 890px;
+   animation: circle 7s infinite linear;
 }
+/*.s{
+  position: relative;
+  top: -210px;
+  left: 890px;
+   animation: circle 10s infinite linear;
+}*/
 @keyframes circle{
   0%{
     transform:rotate(0deg)
@@ -60,14 +66,11 @@ width: 100%;
               rotate(360deg);}
 }
 
-.head{
-  position: absolute;
-  width: 100%;
-}
+
 .head1{
   box-sizing: border-box;
-  width:100%;
-  font-size: 28px;
+  width:250px;
+  font-size: 24px;
   position: relative;
   left: 40px;
   top: 80px;
@@ -75,17 +78,130 @@ width: 100%;
 .head2{
   box-sizing: border-box;
   position: relative;
-  right:40px;
-  top: 80px;
-  width:100%;
-  font-size: 28px;
+  left:1540px;
+  top: 45px;
+  width:300px;
+  font-size: 24px;
 
 }
 .fon1{
   position: absolute;
   top: 430px;
+  z-index:1;
 background-color: #5DB6CA;
 box-sizing: border-box;
 width: 100%;
 height:800px;
 }
+
+
+.container {
+  display: grid;
+  grid-template-columns: 150px 196px 196px 196px 196px 196px 150px;
+  grid-template-rows: 262px 200px 262px;
+  gap: 10px 100px;
+  grid-template-areas:
+    ". eye1 eye2 eye3 eye4 eyetext1 ."
+    ". eyetext2 eyetext2 eyetext2 eye5 eyetext1 ."
+    ". eye6 eye7 eyetext3 eyetext3 eye8 .";
+    position: relative;
+    z-index: 2;
+}
+
+.eyetext1 {
+  grid-area: eyetext1;
+background: url('../img/eye1.svg');
+background-repeat:no-repeat;
+ }
+
+.eyetext2 { grid-area: eyetext2; }
+
+.eyetext3 { grid-area: eyetext3; }
+
+.eye1 {
+  grid-area: eye1;
+  background: url('../img/eye1.svg');
+}
+
+.eye2 {
+  grid-area: eye2;
+  background: url('../img/eye2.svg');
+ }
+
+.eye3 { grid-area: eye3;
+background: url('../img/eye1.svg'); }
+
+.eye4 { grid-area: eye4;
+background: url('../img/eye2.svg') }
+
+.eye5 { grid-area: eye5;}
+
+.eye6 { grid-area: eye6; }
+
+.eye7 { grid-area: eye7; }
+
+.eye8 { grid-area: eye8; }
+
+
+
+
+.container2 {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 150px 196px 196px 196px 196px 196px 150px;
+  grid-template-rows: 262px 200px 262px;
+  gap: 10px 100px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". sune1 sune2 sune3 sune4 suntext1 ."
+    ". suntext2 suntext2 suntext2 sune5 suntext1 ."
+    ". sune6 sune7 suntext3 suntext3 sune8 .";
+    position: relative;
+    top: -754px;
+    z-index: 3;
+}
+
+.suntext1 { grid-area: suntext1; }
+
+.suntext2 { grid-area: suntext2; }
+
+.suntext3 { grid-area: suntext3; }
+
+.sune1 { grid-area: sune1;
+background: url('../img/sun1.svg');
+background-repeat:no-repeat;
+}
+.sune1:hover{
+background: url('../img/sunwhite.svg');
+  animation: moving 2s 1 linear;
+}
+
+.sune2 { grid-area: sune2;
+  background: url('../img/sunyel.svg');
+  background-repeat:no-repeat;}
+  .sune2:hover{
+  background: url('../img/sun1.svg');
+    animation: moving 2s 1 linear;
+  }
+
+.sune3 { grid-area: sune3;
+  background: url('../img/sunwhite.svg');
+  background-repeat:no-repeat;}
+  .sune3:hover{
+  background: url('../img/sunyel.svg');
+    animation: moving 2s 1 linear;
+  }
+.sune4 { grid-area: sune4;
+  background: url('../img/sun1.svg');
+  background-repeat:no-repeat; }
+  .sune4:hover{
+  background: url('../img/sunyel.svg');
+    animation: moving 2s 1 linear;
+  }
+.sune5 { grid-area: sune5; }
+
+.sune6 { grid-area: sune6; }
+
+.sune7 { grid-area: sune7; }
+
+.sune8 { grid-area: sune8; }
