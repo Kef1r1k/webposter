@@ -22,19 +22,16 @@ width: 100%;
 100%{background-color:white;}
 }
 .sun{
-  box-sizing: border-box;
   width:300px;
   height:300px;
   position: relative;
-  left: 40%;
+  right: -40%;
   top: -35px;
   opacity: 1;
   background: url('../img/sun.svg');
-  animation: moving 7s infinite linear;
+  animation: moving 12s infinite linear;
 }
-.sun:hover{
-  animation-play-state: paused;
-}
+
 @keyframes moving {
   100% {transform: rotate(-360deg);}
 }
@@ -44,10 +41,11 @@ width: 100%;
   width:100px;
 }
 .i{
+  width:200px;
   position: relative;
   top: -210px;
-  left: 890px;
-   animation: circle 7s infinite linear;
+  right: -890px;
+   animation: circle 12s infinite linear;
 }
 /*.s{
   position: relative;
@@ -72,13 +70,13 @@ width: 100%;
   width:250px;
   font-size: 24px;
   position: relative;
-  left: 40px;
+  right: -40px;
   top: 80px;
 }
 .head2{
   box-sizing: border-box;
   position: relative;
-  left:1540px;
+  right:-1540px;
   top: 45px;
   width:300px;
   font-size: 24px;
@@ -91,28 +89,24 @@ width: 100%;
 background-color: #5DB6CA;
 box-sizing: border-box;
 width: 100%;
-height:800px;
+height:880px;
 }
 
 
 .container {
   display: grid;
-  grid-template-columns: 150px 196px 196px 196px 196px 196px 150px;
-  grid-template-rows: 262px 200px 262px;
-  gap: 10px 100px;
-  grid-template-areas:
-    ". eye1 eye2 eye3 eye4 eyetext1 ."
-    ". eyetext2 eyetext2 eyetext2 eye5 eyetext1 ."
-    ". eye6 eye7 eyetext3 eyetext3 eye8 .";
+ grid-template-columns: 182px 209px 209px 209px 209px 209px 182px;
+ grid-template-rows: 275px 176px 275px;
+ gap: 34px 123px;
+    grid-template-areas:
+      ". eye1 eye2 eye3 eye4 eyetext1 ."
+      ". eyetext2 eyetext2 eyetext2 eye5 eyetext1 ."
+      ". eye6 eye7 eyetext3 eyetext3 eye8 .";
     position: relative;
+    top: 36px;
+    right: 130px;
     z-index: 2;
 }
-
-.eyetext1 {
-  grid-area: eyetext1;
-background: url('../img/eye1.svg');
-background-repeat:no-repeat;
- }
 
 .eyetext2 { grid-area: eyetext2; }
 
@@ -120,19 +114,19 @@ background-repeat:no-repeat;
 
 .eye1 {
   grid-area: eye1;
-  background: url('../img/eye1.svg');
+  background: url('../img/e1.svg');
 }
 
 .eye2 {
   grid-area: eye2;
-  background: url('../img/eye2.svg');
+  background: url('../img/e3.svg');
  }
 
 .eye3 { grid-area: eye3;
-background: url('../img/eye1.svg'); }
+background: url('../img/e1.svg'); }
 
 .eye4 { grid-area: eye4;
-background: url('../img/eye2.svg') }
+background: url('../img/e3.svg') }
 
 .eye5 { grid-area: eye5;}
 
@@ -148,55 +142,139 @@ background: url('../img/eye2.svg') }
 .container2 {
   margin: auto;
   display: grid;
-  grid-template-columns: 150px 196px 196px 196px 196px 196px 150px;
-  grid-template-rows: 262px 200px 262px;
-  gap: 10px 100px;
+  grid-template-columns: 182px 233px 233px 233px 233px 233px 182px;
+  grid-template-rows: 275px 176px 275px;
+  gap: 34px 100px;
   grid-auto-flow: row;
   grid-template-areas:
     ". sune1 sune2 sune3 sune4 suntext1 ."
     ". suntext2 suntext2 suntext2 sune5 suntext1 ."
     ". sune6 sune7 suntext3 suntext3 sune8 .";
     position: relative;
-    top: -754px;
+    top: -829px;
+    right: 120px;
     z-index: 3;
 }
 
-.suntext1 { grid-area: suntext1; }
+.suntext1 { grid-area: suntext1;
+  background: url('../img/et.svg');
+  background-repeat:no-repeat;
+  animation: show 1s ease 2s 1 normal forwards;
+}
+@keyframes show {
+  0% {background: url('../img/et1.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+ 100% {background: url('../img/et1.svg');
+ background-repeat:no-repeat;
+ background-position: center;
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
+.text1{
+  width:150px;
+  text-align: center;
+  font-size: 36px;
+  line-height: 70px;
+  position: relative;
+  right: -1655px;
+  top: 135px;
+  z-index: 3;
+  opacity: 0;
+  animation: text 1s ease 3s 1 normal forwards;
+}
+@keyframes text {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
 
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+}
 .suntext2 { grid-area: suntext2; }
 
 .suntext3 { grid-area: suntext3; }
 
 .sune1 { grid-area: sune1;
-background: url('../img/sun1.svg');
+background: url('../img/i2.svg');
 background-repeat:no-repeat;
+background-position: center;
 }
 .sune1:hover{
-background: url('../img/sunwhite.svg');
-  animation: moving 2s 1 linear;
+background: url('../img/i5.svg');
+background-repeat:no-repeat;
+background-position: center;
+animation: moving 2s 1 ease-in-out;
 }
 
 .sune2 { grid-area: sune2;
-  background: url('../img/sunyel.svg');
-  background-repeat:no-repeat;}
+  background: url('../img/i3.svg');
+  background-repeat:no-repeat;
+background-position: center;
+}
   .sune2:hover{
-  background: url('../img/sun1.svg');
-    animation: moving 2s 1 linear;
+  animation:swing 1s 2 ease-in-out;
+  }
+  @keyframes swing {
+    15% {
+      transform: translateX(9px);
+    }
+    30% {
+      transform: translateX(-9px);
+    }
+    40% {
+      transform: translateX(6px);
+    }
+    50% {
+      transform: translateX(-6px);
+    }
+    65% {
+      transform: translateX(3px);
+    }
+    100% {
+    transform: translateX(0);
+      transform: translateX(0);
+    }
   }
 
+
 .sune3 { grid-area: sune3;
-  background: url('../img/sunwhite.svg');
-  background-repeat:no-repeat;}
+  background: url('../img/i2.svg');
+  background-repeat:no-repeat;
+background-position: center;}
   .sune3:hover{
-  background: url('../img/sunyel.svg');
-    animation: moving 2s 1 linear;
+    background: url('../img/i5.svg');
+    background-repeat:no-repeat;
+  background-position: center;
+  animation: scale 1s 3 ease-in-out;
   }
+@keyframes scale {
+  0%{transform: scale(1);}
+  50%{transform: scale(1.3);}
+  100%{transform: scale(1);}
+}
+
 .sune4 { grid-area: sune4;
-  background: url('../img/sun1.svg');
+  background: url('../img/i3.svg');
+  background-position: center;
   background-repeat:no-repeat; }
   .sune4:hover{
-  background: url('../img/sunyel.svg');
-    animation: moving 2s 1 linear;
+    animation: rot 1.5s 3 ease-in-out;
+  }
+  @keyframes rot {
+    0%{transform: rotateZ(0deg);}
+    25%{transform: rotateZ(30deg);}
+    50%{transform: rotateZ(-30deg);}
+    75%{transform: rotateZ(30deg);}
+    100%{transform: rotateZ(0deg);}
   }
 .sune5 { grid-area: sune5; }
 
