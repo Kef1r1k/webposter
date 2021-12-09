@@ -5,8 +5,13 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   background: white;
 }
+.top{
+  position: relative;
+  top: 0px;
+}
 .top1{
 position: relative;
+bottom: 0;
 background-color: white;
 z-index: 1;
 height:430px;
@@ -25,7 +30,7 @@ animation: change 20s infinite ease-in-out;
   position: relative;
   z-index:2;
   right: -40%;
-  top: -470px;
+  bottom: 460px;
   opacity: 1;
   background: url('../img/sun.svg');
   animation: moving 12s infinite linear;
@@ -43,7 +48,7 @@ animation: change 20s infinite ease-in-out;
   width:200px;
   position: relative;
   z-index: 2;
-  top: -645px;
+  bottom: 635px;
   right: -890px;
    animation: circle 12s infinite linear;
 }
@@ -72,21 +77,21 @@ animation: change 20s infinite ease-in-out;
   position: relative;
   z-index: 2;
   right: -100px;
-  top: -360px;
+  bottom: 340px;
 }
 .head2{
   box-sizing: border-box;
   position: relative;
   z-index: 2;
-  right:-1540px;
-  top: -400px;
+  left: 1530px;
+  bottom: 390px;
   width:300px;
   font-size: 24px;
 
 }
 .fon1{
   position: relative;
-  top: -450px;
+  bottom: 450px;
   z-index:1;
 background-color: #5DB6CA;
 box-sizing: border-box;
@@ -105,7 +110,7 @@ height:950px;
       ". eyetext2 eyetext2 eyetext2 eye5 eyetext1 ."
       ". eye6 eye7 eyetext3 eyetext3 eye8 .";
     position: relative;
-    top: -1350px;
+    bottom: 1350px;
     right: 130px;
     z-index: 2;
 }
@@ -170,7 +175,7 @@ top: 50px;}
     ". suntext2 suntext2 suntext2 sune5 suntext1 ."
     ". sune6 sune7 suntext3 suntext3 sune8 .";
     position: relative;
-    top: -2212px;
+    bottom:2212px;
     right: 120px;
     z-index: 3;
 }
@@ -479,4 +484,8 @@ background: url('../img/i2.svg');
     0% {transform: scale(1);}
     50% {transform: scale(0);}
     100% {transform: scale(1);}
+  }
+  .fon2{
+  background-color: #FFD101;
+  height:950px;
   }
